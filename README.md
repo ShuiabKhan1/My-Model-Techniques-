@@ -16,3 +16,46 @@ Feature Importance that i have  and can be used post transformation steps (scala
 5. remove redundant features (same importance)
 
 5. Dimentional Reduction (  PCA )- Unsupervised, new features created - Not recommended if interested in same features- More columns 
+
+
+
+There are different ways to get feature importance for a model with too many columns. Here are a few common approaches:
+
+1. Random Forest: One of the advantages of using Random Forest algorithm is that it provides a built-in feature importance metric based on the reduction in impurity achieved by each feature. You can access the feature importance scores using the `feature_importances_` attribute of the Random Forest model. Here's an example:
+
+
+from sklearn.ensemble import RandomForestRegressor
+
+rf = RandomForestRegressor(n_estimators=100)
+
+rf.fit(X_train, y_train)
+
+importances = rf.feature_importances_
+
+The `importances` variable will contain an array of feature importances for each column in `X_train`.
+
+2. Permutation Importance: Another approach is to use Permutation Importance to measure the importance of features. Permutation Importance works by permuting the values of each feature column in the dataset, and measuring the impact on the model's performance. Scikit-learn provides an implementation of this approach through the `PermutationImportance` class. Here's an example:
+
+
+from sklearn.inspection import permutation_importance
+
+result = permutation_importance(rf, X_train, y_train, n_repeats=10, random_state=0)
+
+importances = result.importances_mean
+
+The `importances` variable will contain an array of feature importances for each column in `X_train`.
+
+3. Recursive Feature Elimination (RFE): RFE is an iterative approach that works by removing the least important features recursively until a desired number of features is reached. Scikit-learn provides a class called `RFECV` (Recursive Feature Elimination with Cross Validation) that performs RFE while using cross-validation to evaluate the model. Here's an example:
+
+
+from sklearn.feature_selection import RFECV
+
+rf = RandomForestRegressor(n_estimators=100)
+rfecv = RFECV(estimator=rf, step=1, cv=10, scoring='r2')
+rfecv.fit(X_train, y_train)
+
+importances = rfecv.support_
+
+The `importances` variable will contain a boolean mask indicating which columns are considered important by the `RFECV` algorithm.
+
+These are just a few examples of how you can obtain feature importance for a high-dimensional dataset. Depending on your specific use case, you may need to experiment with different algorithms and approaches to understand the underlying structure of your data and identify the most important features.
