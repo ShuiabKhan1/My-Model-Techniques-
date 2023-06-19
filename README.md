@@ -18,7 +18,8 @@ Coefficient Magnitude: For linear models such as Logistic Regression or Support 
 
 7. remove redundant features (same importance)
 
-5. Dimentional Reduction (  PCA )- Unsupervised, new features created - Not recommended if interested in same features- More columns 
+5. Dimentional Reduction (  PCA )- Unsupervised, new features created - Not recommended if interested in same features- More columns
+   also, L1 and L2 regularization can be applied to both classification and regression models. They are regularization techniques used to prevent overfitting and improve the generalization ability of machine learning models. this can be used futher for better model 
 
 
 
