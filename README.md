@@ -4,16 +4,19 @@ Feature Importance that i have  and can be used post transformation steps (scala
 
 1. sklearns SelectKbest(chi2 ,mutual info ..etc ) c2 for linear correlation var vs target (pvalue, 2 variables are indepen)
   mutual info - information theory scoring - Non Linear correl )
+Chi-Square or ANOVA Test: If your features are categorical, you can use statistical tests like the Chi-Square test or Analysis of Variance (ANOVA) to evaluate the relationship between each feature and the target variable. Features with significant p-values indicate higher importance.
   
-2. sklearns permutation_importance
+3. sklearns permutation_importance
 
       "we need to be careful while selexting 1, 2 here because this just gives us top features but we might not need features with same score instead use non redundant ones, then we go for 5th option \n", 
 
-3. Models sklearns feature_importances_ with diff models  randamForest - impurities, LogReg, DT...etc 
+4. sklearns feature_importances_ with diff models  randamForest - impurities, LogReg, DT...etc
+Tree-based Feature Importance: Decision tree-based classifiers like Random Forests or Gradient Boosting models provide feature importance scores based on how much a feature reduces impurity in the trees. gain and Gini index are used to measure the usefulness of a feature for splitting the data. Higher values of information gain or lower values of the Gini index indicate more important features.
+Coefficient Magnitude: For linear models such as Logistic Regression or Support Vector Machines (SVM), you can examine the magnitude of the coefficients assigned to each feature. Larger absolute values of coefficients indicate more important features.
 
-4. Recursive Feature Elimination  - decription is written above 
+6. Recursive Feature Elimination  - decription is written above 
 
-5. remove redundant features (same importance)
+7. remove redundant features (same importance)
 
 5. Dimentional Reduction (  PCA )- Unsupervised, new features created - Not recommended if interested in same features- More columns 
 
