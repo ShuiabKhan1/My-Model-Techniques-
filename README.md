@@ -63,3 +63,19 @@ importances = rfecv.support_
 The `importances` variable will contain a boolean mask indicating which columns are considered important by the `RFECV` algorithm.
 
 These are just a few examples of how you can obtain feature importance for a high-dimensional dataset. Depending on your specific use case, you may need to experiment with different algorithms and approaches to understand the underlying structure of your data and identify the most important features.
+# scaling 
+StandardScaler:
+
+StandardScaler follows a standardization approach, also known as Z-score normalization.
+It scales the features by subtracting the mean and dividing by the standard deviation of the feature values.
+The resulting transformed values have a mean of 0 and a standard deviation of 1.
+StandardScaler preserves the shape of the distribution but centers it around 0 and adjusts the spread.
+It is suitable when the data does not have a specific range or when the distribution of the data is approximately Gaussian.
+MinMaxScaler:
+
+MinMaxScaler follows a normalization approach, also known as min-max scaling.
+It scales the features by subtracting the minimum value and dividing by the range (maximum value - minimum value) of the feature values.
+The resulting transformed values are in the range [0, 1].
+MinMaxScaler compresses the data into a specific range, preserving the relative relationships between the data points.
+It is suitable when the distribution of the data is not necessarily Gaussian and when the specific range of the data is important.
+In summary, StandardScaler standardizes the data by centering it around 0 and adjusting the spread, while MinMaxScaler normalizes the data to a specific range, usually [0, 1]. The choice between the two depends on the nature of the data and the requirements of the specific machine learning algorithm or task.
