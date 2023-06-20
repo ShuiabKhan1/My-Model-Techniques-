@@ -1,4 +1,5 @@
 # My-Model-Techniques-
+### Feature Importance
 Feature Importance
 Feature Importance that i have  and can be used post transformation steps (scalar, One hot, Normalization, resampling,Missing values...etc) and before training model ...
 
@@ -63,7 +64,7 @@ importances = rfecv.support_
 The `importances` variable will contain a boolean mask indicating which columns are considered important by the `RFECV` algorithm.
 
 These are just a few examples of how you can obtain feature importance for a high-dimensional dataset. Depending on your specific use case, you may need to experiment with different algorithms and approaches to understand the underlying structure of your data and identify the most important features.
-# scaling 
+# Feature scaling 
 StandardScaler:
 
 StandardScaler follows a standardization approach, also known as Z-score normalization.
