@@ -82,3 +82,5 @@ It is suitable when the distribution of the data is not necessarily Gaussian and
 In summary, StandardScaler standardizes the data by centering it around 0 and adjusting the spread, while MinMaxScaler normalizes the data to a specific range, usually [0, 1]. The choice between the two depends on the nature of the data and the requirements of the specific machine learning algorithm or task.
 ### Pipelining examples 
 https://www.youtube.com/watch?v=HZ9MUzCRlzI  -  watch multiple exmaples here ..basic code available to brush up the topics 
+
+https://machinelearningmastery.com/modeling-pipeline-optimization-with-scikit-learn/
