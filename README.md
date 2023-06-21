@@ -2,7 +2,9 @@
 ### Pipelining examples 
 
 https://machinelearningmastery.com/modeling-pipeline-optimization-with-scikit-learn/
+
 https://www.youtube.com/watch?v=HZ9MUzCRlzI  -  watch multiple exmaples here ..basic code available to brush up the topics 
+
 https://scikit-learn.org/stable/auto_examples/ensemble/plot_feature_transformation.html#sphx-glr-auto-examples-ensemble-plot-feature-transformation-py
 
 ### Feature Importance
