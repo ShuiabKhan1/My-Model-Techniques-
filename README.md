@@ -4,6 +4,7 @@ https://www.youtube.com/watch?v=HZ9MUzCRlzI  -  watch multiple exmaples here ..b
 
 https://machinelearningmastery.com/modeling-pipeline-optimization-with-scikit-learn/
 
+https://scikit-learn.org/stable/auto_examples/ensemble/plot_feature_transformation.html#sphx-glr-auto-examples-ensemble-plot-feature-transformation-py
 
 ### Feature Importance
 Feature Importance
